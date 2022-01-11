@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kuiva';
+  data = [
+    {name:"Oti",isFav:true},
+    {name:"Saba",isFav:true},
+  {name:"Kip",isFav:false},
+  {name:"Yusuf",isFav:true},
+  {name:"Pombe",isFav:false},
+  {name:"Waru",isFav:true}
+]
+
 }
