@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FavoriteComponent implements OnInit {
 
   btnText:string="";
-  @Input() isFavorite:boolean = false;
+  @Input('is-favorite') isFavorite:boolean = false;
   
   constructor() { }
 
