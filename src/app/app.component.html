@@ -1,17 +1,26 @@
 <h1>Chris Angular</h1>
 <br>
-<table class="table table-stripped">
-    <thead>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Option</th>
-    </thead>
-    <tbody>
-        <tr *ngFor="let d of data">
-            <td>{{d.id}}</td>
-            <td>{{d.name}}</td>
-            <td><favorite [is-favorite]="d.isFav"></favorite></td>
-        </tr>
-    </tbody>
-</table>
-<!-- <button type="button" class="btn btn-primary">Yes</button> -->
+<div class="card border-primary mb-3" >
+    <div class="card-header">People</div>
+    <div class="card-body text-primary" *ngIf="data.length > 0 ; else noData" >
+        <table class="table table-stripped">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Option</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let d of data">
+                    <td>{{d.id}}</td>
+                    <td>{{d.name}}</td>
+                    <td><favorite [is-favorite]="d.isFav"></favorite></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <ng-template #noData>
+        <p>No data</p>
+        </ng-template>
+  </div>
+
+
