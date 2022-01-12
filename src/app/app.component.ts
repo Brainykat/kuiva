@@ -15,5 +15,6 @@ export class AppComponent {
     {id:5, name:"Pombe",isFav:false},
     {id:6, name:"Waru",isFav:true}
 ]
+viewMode="points";
 
 }

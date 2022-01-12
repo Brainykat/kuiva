@@ -2,7 +2,7 @@
 <br>
 <div class="card border-primary mb-3" >
     <div class="card-header">People</div>
-    <div class="card-body text-primary" *ngIf="data.length > 0 ; else noData" >
+    <div class="card-body text-primary" *ngIf="data.length > 0; else noData" >
         <table class="table table-stripped">
             <thead>
                 <th>Id</th>
@@ -23,4 +23,24 @@
         </ng-template>
   </div>
 
-
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <button class="nav-link" [class.active]="viewMode == 'points'" aria-current="page" (click)="viewMode = 'points'">Points</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link"  [class.active]="viewMode == 'data'"  (click)="viewMode = 'data'">Data</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link"  [class.active]="viewMode == 'map'"  (click)="viewMode = 'map'">Map</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link"  [class.active]="viewMode == 'list'" (click)="viewMode = 'list'" >List</button>
+    </li>
+  </ul>
+  <div [ngSwitch]="viewMode">
+      <div *ngSwitchCase="'points'">Points !!!</div>
+      <div *ngSwitchCase="'data'">Data !!!</div>
+      <div *ngSwitchCase="'map'">Map !!!</div>
+      <div *ngSwitchCase="'list'">List !!!</div>
+      <div *ngSwitchDefault>Nothing </div>
+  </div>
