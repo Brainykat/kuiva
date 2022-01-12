@@ -1,5 +1,5 @@
 <button  (click)="onClick()" class="btn"
     [class.btn-primary]="isFavorite"
     [class.btn-danger]="!isFavorite"
-> {{btnText}}
+> <ng-content select=".btnText"></ng-content>
 </button>
