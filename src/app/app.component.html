@@ -11,7 +11,7 @@
                 <th>Delete</th>
             </thead>
             <tbody>
-                <tr *ngFor="let d of data">
+                <tr *ngFor="let d of data; ngForTrackBy:trackPerson ">
                     <td>{{d.id}}</td>
                     <td>{{d.name}}</td>
                     <td><favorite [is-favorite]="d.isFav"></favorite></td> 

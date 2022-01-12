@@ -15,6 +15,9 @@ export class AppComponent {
     {id:5, name:"Pombe",isFav:false},
     {id:6, name:"Waru",isFav:true}
 ];
+trackPerson(index:number,d:any){
+  d? d.id:undefined;
+}
 addPerson(){
   let r = (Math.random() + 1).toString(36).substring(7); //Random string
   this.data.push({id:this.data.length+1,name:r,isFav:true});
