@@ -1,5 +1,7 @@
 <button  (click)="onClick()" class="btn"
-    [class.btn-primary]="isFavorite"
-    [class.btn-danger]="!isFavorite"
+    [ngClass]="{
+        'btn-primary':isFavorite,
+        'btn-danger':!isFavorite
+    }"
 > {{btnText}}
 </button>

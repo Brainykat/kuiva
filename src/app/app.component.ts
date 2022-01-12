@@ -27,5 +27,5 @@ removePerson(person:any){
   this.data.splice(index,1);
 }
 viewMode="points";
-
+canSave=false;
 }

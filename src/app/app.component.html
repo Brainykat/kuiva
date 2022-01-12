@@ -21,9 +21,13 @@
         </table>
     </div>
     <div class="card card-footer">
-        <button class="btn "
-        
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn"
+            [ngStyle]="{
+                'backgroundColor':canSave ? 'green' :'gray'
+            }"
         >Save</button>
+    </div>
     </div>
     <ng-template #noData>
         <p>No data</p>
