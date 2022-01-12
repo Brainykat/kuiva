@@ -13,10 +13,10 @@ export class FavoriteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.btnText = this.isFavorite ? "True":"false";
+    this.btnText = this.isFavorite ? "True":"False";
   }
   onClick(){
     this.isFavorite=!this.isFavorite;
-    this.btnText = this.isFavorite ? "True":"false";
+    this.btnText = this.isFavorite ? "True":"False";
   }
 }
