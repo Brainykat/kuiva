@@ -1,19 +1,21 @@
 <h1>Chris Angular</h1>
 <br>
 <div class="card border-primary mb-3" >
-    <div class="card-header">People <button class="btn" (click)="addPerson()">Add Me</button> </div>
+    <div class="card-header">People <button class="btn btn-primary" (click)="addPerson()">Add Me</button> </div>
     <div class="card-body text-primary" *ngIf="data.length > 0; else noData" >
         <table class="table table-stripped">
             <thead>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Option</th>
+                <th>Delete</th>
             </thead>
             <tbody>
                 <tr *ngFor="let d of data">
                     <td>{{d.id}}</td>
                     <td>{{d.name}}</td>
-                    <td><favorite [is-favorite]="d.isFav"></favorite></td>
+                    <td><favorite [is-favorite]="d.isFav"></favorite></td> 
+                    <td><button class="btn btn-danger" (click)="removePerson(d)"> Remove</button></td>
                 </tr>
             </tbody>
         </table>

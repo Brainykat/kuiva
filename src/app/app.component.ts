@@ -16,7 +16,12 @@ export class AppComponent {
     {id:6, name:"Waru",isFav:true}
 ];
 addPerson(){
-  this.data.push({id:this.data.length+1,name:"me",isFav:true});
+  let r = (Math.random() + 1).toString(36).substring(7); //Random string
+  this.data.push({id:this.data.length+1,name:r,isFav:true});
+}
+removePerson(person:any){
+  let index =this.data.indexOf(person);
+  this.data.splice(index,1);
 }
 viewMode="points";
 
