@@ -1,7 +1,7 @@
 <h1>Chris Angular</h1>
 <br>
 <div class="card border-primary mb-3" >
-    <div class="card-header">People</div>
+    <div class="card-header">People <button class="btn" (click)="addPerson()">Add Me</button> </div>
     <div class="card-body text-primary" *ngIf="data.length > 0; else noData" >
         <table class="table table-stripped">
             <thead>

@@ -14,7 +14,10 @@ export class AppComponent {
     {id:4, name:"Yusuf",isFav:true},
     {id:5, name:"Pombe",isFav:false},
     {id:6, name:"Waru",isFav:true}
-]
+];
+addPerson(){
+  this.data.push({id:this.data.length+1,name:"me",isFav:true});
+}
 viewMode="points";
 
 }
