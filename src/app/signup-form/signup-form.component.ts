@@ -15,5 +15,8 @@ export class SignupFormComponent implements OnInit {
   form = new FormGroup({
     username: new FormControl('', Validators.required),
     password:new FormControl('', Validators.required)
-  })
+  });
+  get username(){
+    return this.form.get('username');
+  }
 }
