@@ -1,4 +1,8 @@
 <form>
+    <div formGroupName="contact">
+        <input formControlName="email">
+        <input formControlName="phone">
+    </div>
     <label for="topic">Topic</label>
     <input name="topic" id="topic" type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
     <ul class="list-group">
