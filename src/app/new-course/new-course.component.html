@@ -3,7 +3,8 @@
     <input name="topic" id="topic" type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
     <ul class="list-group">
         <li
-        *ngFor="let topic of form.get('topics')?.value"
-        class="list-group-item">{{topic}}</li>
+        *ngFor="let topic of topics?.value"
+        (click)="removeTopic(topic)"
+        class="list-group-item">{{topic}}</li> 
     </ul>
 </form>
