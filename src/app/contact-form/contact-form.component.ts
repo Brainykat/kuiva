@@ -23,6 +23,7 @@ export class ContactFormComponent implements OnInit {
     console.log(x);
   }
   submit(f:any){
+    console.log("form");
     console.log(f);
     console.log("form");
   }
