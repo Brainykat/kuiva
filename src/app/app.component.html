@@ -1,5 +1,9 @@
 <h1>Chris Angular</h1>
 <br>
+<app-signup-form></app-signup-form>
+<br>
+
+
 <div class="card border-primary mb-3" >
     <div class="card-header">People <button class="btn btn-primary" (click)="addPerson()">Add Me</button> </div>
     <div class="card-body text-primary" *ngIf="data.length > 0; else noData" >
@@ -11,7 +15,7 @@
                 <th>Delete</th>
             </thead>
             <tbody>
-                <tr *ngFor="let d of data; ngForTrackBy:trackPerson ">
+                 <tr *ngFor="let d of data "> <!--; ngForTrackBy:trackPerson -->
                     <td>{{d.id}}</td>
                     <td>{{d.name}}</td>
                     <td><favorite [is-favorite]="d.isFav"></favorite></td> 
