@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="submit(f)">
+<form #f="ngForm" (ngSubmit)="submit(f.value)">
     <div ngModelGroup="contact" #contact="ngModelGroup">
         <div class="form-group">
             <label for="firstName">First Name</label>
@@ -9,7 +9,7 @@
                 <div *ngIf="firstName.errors?.['maxlength']">First name should not exceed 10 characters</div>
                 <div *ngIf="firstName.errors?.['pattern']">First name does not match pattern </div>
             </div>
-        </div>
+        </div> 
         <div class="form-group">
             <label for="comment">Comment</label>
             <textarea ngModel name="comment" id="comment" cols="30" rows="2" class="form-control"></textarea>
