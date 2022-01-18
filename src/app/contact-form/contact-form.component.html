@@ -23,9 +23,9 @@
              <label for="contactMethod">
                 Contact Method
              </label>
-             <select ngModel name="contactMethod" id="contactMethod" class="form-control">
+             <select multiple ngModel name="contactMethod" id="contactMethod" class="form-control">
                  <option value=""></option>
-                 <option *ngFor="let m of contactMethods" [ngValue]="m">{{m.name}}</option>
+                 <option *ngFor="let m of contactMethods" [value]="m.id">{{m.name}}</option>
                 <!-- <option *ngFor="let m of contactMethods" [value]="m.id">{{m.name}}</option> -->
              </select>
             </div>
