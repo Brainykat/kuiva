@@ -24,8 +24,9 @@
                 Contact Method
              </label>
              <select ngModel name="contactMethod" id="contactMethod" class="form-control">
-                 
-                <option *ngFor="let m of contactMethods" [value]="m.id">{{m.name}}</option>
+                 <option value=""></option>
+                 <option *ngFor="let m of contactMethods" [ngValue]="m">{{m.name}}</option>
+                <!-- <option *ngFor="let m of contactMethods" [value]="m.id">{{m.name}}</option> -->
              </select>
             </div>
         <p>{{f.value |json}}</p>
