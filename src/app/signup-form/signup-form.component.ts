@@ -17,9 +17,10 @@ export class SignupFormComponent implements OnInit {
     username: new FormControl('',[ 
       Validators.required,
       Validators.minLength(5),
-      Validators.email,
+      Validators.email, 
       Validators.maxLength(50),
-      UsernameValidators.cannotContainSpace
+      UsernameValidators.cannotContainSpace,
+      UsernameValidators.shouldBeUnique
     ]),
     password:new FormControl('', Validators.required)
   });
