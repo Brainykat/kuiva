@@ -20,7 +20,11 @@ export class PostsComponent implements OnInit {
           console.log("data",response);
       },
       error => {
-
+        //This should be a Toast
+        //Log this error
+          alert('An unexpected error occured');
+          console.log(console.error);
+          
       }
     )
   }
