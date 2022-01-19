@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { PostService } from './post.service';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
   posts:any[] | undefined;
-  private url = 'http://jsonplaceholder.typicode.com/posts';
-  constructor(private http:HttpClient) { 
-    
+ 
+
+  constructor(private service : PostService) { 
   }
 
   ngOnInit(): void {
-    this.http.get(this.url).subscribe(
+    this.service.getPosts().subscribe(
       response => {
           console.log("data",response);
       },
