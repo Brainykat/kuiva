@@ -8,7 +8,7 @@ import { UsernameValidators } from './username.validators';
   styleUrls: ['./signup-form.component.scss']
 })
 export class SignupFormComponent implements OnInit {
- 
+  
   constructor() { }
 
   ngOnInit(): void {

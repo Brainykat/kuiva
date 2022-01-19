@@ -1,8 +1,12 @@
 <form>
+    <div [formGroup]="form">
     <div formGroupName="contact">
-        <input formControlName="email">
-        <input formControlName="phone">
-    </div>
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text" formControlName="email" class="form-control">
+        <label for="phone">Phone</label>
+        <input  name="phone" id="phone" type="text" formControlName="phone" class="form-control">
+   
+</div>
     <label for="topic">Topic</label>
     <input name="topic" id="topic" type="text" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
     <ul class="list-group">
@@ -11,4 +15,5 @@
         (click)="removeTopic(topic)"
         class="list-group-item">{{topic}}</li> 
     </ul>
+</div>
 </form>

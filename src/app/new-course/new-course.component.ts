@@ -7,7 +7,7 @@ import { FormArray, FormGroup, FormControl, FormBuilder, Validators } from '@ang
   styleUrls: ['./new-course.component.scss']
 })
 export class NewCourseComponent implements OnInit {
-  //form;
+  form:FormGroup;
   constructor(fb : FormBuilder) {
    this.form= fb.group({
       name:['',Validators.required],
@@ -21,7 +21,7 @@ export class NewCourseComponent implements OnInit {
 
   ngOnInit(): void {
   }
-   form;
+   //form;
   //   = new FormGroup({
   //    name: new FormControl('',Validators.required),
   //    contact: new FormGroup({
