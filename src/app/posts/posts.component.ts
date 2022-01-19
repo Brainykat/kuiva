@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-
+  posts:any[] | undefined;
   private url = 'http://jsonplaceholder.typicode.com/posts';
   constructor(private http:HttpClient) { 
-    http.get(this.url).subscribe(
+    
+  }
+
+  ngOnInit(): void {
+    this.http.get(this.url).subscribe(
       response => {
           console.log("data",response);
       },
@@ -19,10 +23,6 @@ export class PostsComponent implements OnInit {
 
       }
     )
-  }
-
-  ngOnInit(): void {
-    
   }
 
 }
