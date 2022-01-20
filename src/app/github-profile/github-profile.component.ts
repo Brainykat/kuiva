@@ -18,7 +18,8 @@ export class GithubProfileComponent implements OnInit {
       .subscribe(params => {
           //console.log(params);
           let id = params.get('id');
-          console.log(id);
+          let username = params.get('username');
+          console.log(id + " => " + username);
       });
   }
 
