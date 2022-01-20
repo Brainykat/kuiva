@@ -16,6 +16,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseComponent } from './new-course/new-course.component';
 import { PostsComponent } from './posts/posts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +30,8 @@ import { PostsComponent } from './posts/posts.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule, ReactiveFormsModule,
-  //  HttpClient, 
-    HttpClientModule, 
+    FormsModule, ReactiveFormsModule, 
+    HttpClientModule,
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
