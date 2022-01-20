@@ -5,9 +5,10 @@
   <li 
     *ngFor="let post of posts"
     class="list-group-item">
+    
+    {{ post.title }}
     <button 
       (click)="deletePost(post)"
-      class="btn btn-default btn-sm">Delete</button>
-    {{ post.title }}
+      class="btn btn-danger btn-sm float-end">Delete</button>
   </li>
 </ul>

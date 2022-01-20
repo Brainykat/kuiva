@@ -13,6 +13,7 @@ export class GithubProfileComponent implements OnInit {
   ngOnInit(): void {
     //If you dont allow next| prev on same page you can use snapshot
     //this.route.snapshot.paramMap.get('id');
+    //else use observable
     this.route.paramMap
       .subscribe(params => {
           //console.log(params);

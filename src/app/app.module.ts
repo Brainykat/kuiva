@@ -1,5 +1,5 @@
 import { PostService } from './posts/post.service';
-//import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -18,6 +18,8 @@ import { PostsComponent } from './posts/posts.component';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GithubProfileComponent } from './github-profile/github-profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -32,12 +34,31 @@ import { NavbarComponent } from './navbar/navbar.component';
     PostsComponent,
     GithubFollowersComponent,
     HomeComponent,
-    NavbarComponent, 
+    NavbarComponent,
+    GithubProfileComponent,
+    NotFoundComponent, 
   ],
   imports: [
     BrowserModule,
     FormsModule, ReactiveFormsModule, 
     HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'',component: HomeComponent
+      },
+      {
+        path:'followers/:id',component: GithubProfileComponent
+      },
+      {
+        path:'followers',component: GithubFollowersComponent
+      },
+      {
+        path:'posts',component: PostsComponent
+      },
+      {
+        path:'**',component: NotFoundComponent
+      },
+    ])
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
