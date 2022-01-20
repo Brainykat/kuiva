@@ -16,6 +16,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseComponent } from './new-course/new-course.component';
 import { PostsComponent } from './posts/posts.component';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
     SignupFormComponent,
     NewCourseComponent,
     PostsComponent,
-    GithubFollowersComponent, 
+    GithubFollowersComponent,
+    HomeComponent,
+    NavbarComponent, 
   ],
   imports: [
     BrowserModule,
