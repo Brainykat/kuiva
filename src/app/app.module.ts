@@ -15,6 +15,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseComponent } from './new-course/new-course.component';
 import { PostsComponent } from './posts/posts.component';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { PostsComponent } from './posts/posts.component';
     ContactFormComponent,
     SignupFormComponent,
     NewCourseComponent,
-    PostsComponent, 
+    PostsComponent,
+    GithubFollowersComponent, 
   ],
   imports: [
     BrowserModule,
