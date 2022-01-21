@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-github-profile',
@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GithubProfileComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     //If you dont allow next| prev on same page you can use snapshot
@@ -22,5 +23,8 @@ export class GithubProfileComponent implements OnInit {
           console.log(id + " => " + username);
       });
   }
-
+  onSubmit(){
+    this.router.navigate(['/followers']
+    );
+  }
 }

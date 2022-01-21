@@ -1,6 +1,6 @@
 import { PostService } from './posts/post.service';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule, HttpClient} from '@angular/common/http'
@@ -20,6 +20,11 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GithubProfileComponent } from './github-profile/github-profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NoAccessComponent } from './no-access/no-access.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { DataService } from './services/data.service';
+import { AppErrorHandler } from './common/app-error-handler';
 
 
 @NgModule({
@@ -36,7 +41,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     NavbarComponent,
     GithubProfileComponent,
-    NotFoundComponent, 
+    NotFoundComponent,
+    NoAccessComponent,
+    LoginComponent, 
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -55,12 +63,19 @@ import { NotFoundComponent } from './not-found/not-found.component';
       {
         path:'posts',component: PostsComponent
       },
+      { path: 'admin', component: AdminComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'no-access', component: NoAccessComponent },
       {
         path:'**',component: NotFoundComponent
       },
+      
     ])
   ],
-  providers: [PostService],
+  providers: [PostService,
+  DataService,
+  {provide:ErrorHandler, useClass: AppErrorHandler}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
