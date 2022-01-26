@@ -40,4 +40,10 @@ export class AuthService {
      }
      return false;
    }
+   getCurrentUser(){
+    let myRawToken:string|null = localStorage.getItem('token');
+    if(!myRawToken) return null;
+    return new JwtHelperService().decodeToken(myRawToken);
+
+   }
 }

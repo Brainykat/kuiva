@@ -1,3 +1,4 @@
+import { AuthGuard } from './services/auth-guard.service';
 import { PostService } from './posts/post.service';
 import { RouterModule } from '@angular/router';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -63,7 +64,7 @@ import { AppErrorHandler } from './common/app-error-handler';
       {
         path:'posts',component: PostsComponent
       },
-      { path: 'admin', component: AdminComponent },
+      { path: 'admin', component: AdminComponent, canActivate:[AuthGuard] },
       { path: 'login', component: LoginComponent },
       { path: 'no-access', component: NoAccessComponent },
       {
